@@ -1,0 +1,360 @@
+<!DOCTYPE html>
+<html>
+<head>
+<title>Contact Us | Fenix Car Hire</title>
+<link rel="stylesheet" href="style.css">
+<style>
+
+body{
+font-family:Arial;
+margin:0;
+background:#f4f6fb;
+}
+
+/* HEADER */
+
+header{
+background:#1a4a8d;
+color:white;
+padding:15px 40px;
+display:flex;
+justify-content:space-between;
+align-items:center;
+flex-wrap:wrap;
+box-shadow:0 3px 12px rgba(0,0,0,0.2);
+}
+
+nav a{
+color:white;
+margin-left:20px;
+text-decoration:none;
+font-weight:bold;
+padding:8px 14px;
+border-radius:6px;
+transition:0.3s;
+}
+
+nav a:hover{
+background:white;
+color:#1a4a8d;
+}
+
+/* TICKER */
+
+.ticker-wrap{
+background:#0d2f5f;
+overflow:hidden;
+color:white;
+}
+
+.ticker{
+display:flex;
+gap:80px;
+padding:12px;
+animation:scrollText 20s linear infinite;
+}
+
+@keyframes scrollText{
+from{transform:translateX(100%);}
+to{transform:translateX(-100%);}
+}
+
+/* PAGE LAYOUT */
+
+.contact-container{
+display:grid;
+grid-template-columns:repeat(auto-fit,minmax(320px,1fr));
+gap:40px;
+padding:70px 5%;
+}
+
+/* INFO BOX */
+
+.info-panel{
+background:white;
+padding:35px;
+border-radius:15px;
+border-left:6px solid #1a4a8d;
+box-shadow:0 10px 30px rgba(0,0,0,0.08);
+}
+
+.info-panel h2{
+color:#1a4a8d;
+margin-bottom:20px;
+}
+
+/* FORM */
+
+.contact-form{
+background:white;
+padding:35px;
+border-radius:15px;
+box-shadow:0 10px 30px rgba(0,0,0,0.1);
+}
+
+input, textarea, select{
+width:100%;
+padding:14px;
+margin-top:10px;
+margin-bottom:18px;
+border:1px solid #ddd;
+border-radius:8px;
+transition:0.3s;
+}
+
+input:focus, textarea:focus, select:focus{
+border-color:#1a4a8d;
+outline:none;
+box-shadow:0 0 8px rgba(26,74,141,0.2);
+}
+
+.btn-submit{
+background:#1a4a8d;
+color:white;
+padding:15px;
+border:none;
+width:100%;
+border-radius:8px;
+font-weight:bold;
+cursor:pointer;
+transition:0.3s;
+}
+
+.btn-submit:hover{
+background:#0d2f5f;
+}
+
+/* REGIONAL HUB */
+
+.region-section{
+padding:60px 5%;
+background:white;
+}
+
+.region-grid{
+display:grid;
+grid-template-columns:repeat(auto-fit,minmax(240px,1fr));
+gap:25px;
+margin-top:30px;
+
+}
+
+.region-card{
+padding:25px;
+border-radius:12px;
+border-top:5px solid #1a4a8d;
+background:#f8f9fa;
+transition:0.3s;
+}
+
+.region-card:hover{
+transform:translateY(-8px);
+box-shadow:0 10px 25px rgba(0,0,0,0.1);
+}
+
+/* MAP SECTION */
+
+.map-section{
+padding:60px 5%;
+text-align:center;
+}
+
+iframe{
+width:100%;
+height:400px;
+border-radius:15px;
+border:none;
+box-shadow:0 10px 30px rgba(0,0,0,0.1);
+}
+
+/* WHATSAPP BUTTON */
+
+.whatsapp-btn{
+display:inline-block;
+background:#25D366;
+color:white;
+padding:14px 25px;
+text-decoration:none;
+border-radius:8px;
+margin-top:15px;
+font-weight:bold;
+}
+.facebook-btn{
+display:inline-block;
+background:blue;
+color:white;
+padding:14px 25px;
+text-decoration:none;
+border-radius:8px;
+margin-top:15px;
+font-weight:bold;
+}
+
+/* FOOTER */
+
+footer{
+background:blue;
+color:white;
+text-align:center;
+padding:15px;
+margin-top:40px;
+}
+
+/* RESPONSIVE */
+
+@media(max-width:768px){
+
+header{
+flex-direction:column;
+text-align:center;
+}
+
+nav{
+margin-top:15px;
+}
+
+}
+
+</style>
+
+</head>
+<body>
+
+<nav>
+<div class="logo">FENIX CAR HIRE</div>
+<ul>
+<li><a href="index.html">Home</a></li>
+<li><a href="about.html">About</a></li>
+<li><a href="services.html">Services</a></li>
+<li><a href="fleet.html">Fleet</a></li>
+<li><a href="contact.html">Contact</a></li>
+<li><a href="Terms & Conditions.html">Terms & Conditions</a></li>
+</ul>
+</nav>
+
+<section class="section">
+<!-- TICKER -->
+
+<div class="ticker-wrap">
+<div class="ticker">
+<div>RELIABLE RENTALS</div>
+<div>PROFESSIONAL SERVICE</div>
+<div>NATIONWIDE DELIVERY</div>
+<div>TENDER READY COMPLIANCE</div>
+</div>
+</div>
+
+
+<!-- CONTACT AREA -->
+
+<section class="contact-container">
+
+<div class="info-panel">
+<h2>Our Headquarters</h2>
+
+<p><strong>Address:</strong><br>
+Litsemba Street, Lilanga Complex<br>
+Sidwashini, Mbabane</p>
+
+<p><strong>Phone:</strong><br>
+<a href="Tel:(+268) 2422 1045">+268 2422 1045</a><br>
+<a href="Cell:(+268) 7682 9797">+268 7682 9797</a><br>
+<a href="Cell:(+268) 7984 9797">268 7984 9797</a></p>
+
+<p><strong>Email:</strong><br>
+<a href="reception@fenix.co.sz">reception@fenix.co.sz</a></p>
+
+<a href="https://wa.me/26876829797" class="whatsapp-btn">
+Chat on WhatsApp
+</a>
+<a href="https://facebook.com/fenix.carhire" class="facebook-btn">
+Facebook
+</a>
+</div>
+
+
+<div class="contact-form">
+
+<h2 style="color:#1a4a8d;">Request a Quote</h2>
+
+<form>
+<input type="text" placeholder="Full Name" required>
+<input type="email" placeholder="Email Address" required>
+
+<select>
+<option>Select Region</option>
+<option>Mbabane & Hhohho</option>
+<option>Manzini & Matsapha</option>
+<option>Lubombo</option>
+<option>Shiselweni</option>
+</select>
+
+<textarea rows="4" placeholder="Message (Include dates and vehicle type)"></textarea>
+
+<button class="btn-submit">SEND REQUEST</button>
+
+</form>
+
+</div>
+
+</section>
+
+
+<!-- MAP -->
+
+<section class="map-section">
+
+<h2 style="color:#1a4a8d;">Find Us On Map</h2>
+
+<iframe 
+src="https://maps.google.com/?q=Lilanga%20Complex%20Sidwashini%20Mbabane&t=&z=15&ie=UFT8&iwloc=&output=embed"
+width= "100%";
+height="350"
+style="border: 0;"
+allowfullscreen=""
+loading= "lazyy">
+</iframe>
+
+</section>
+
+
+<!-- REGIONAL HUB -->
+
+<section class="region-section">
+
+<h2 style="text-align:center;color:#1a4a8d;">Nationwide Service Network</h2>
+
+<div class="region-grid">
+
+<div class="region-card">
+<h3>Mbabane & Hhohho</h3>
+<p>Government and corporate clients support.</p>
+</div>
+
+<div class="region-card">
+<h3>Manzini & Matsapha</h3>
+<p>Industrial and business transport services.</p>
+</div><br>
+
+<div class="region-card">
+<h3>Lubombo</h3>
+<p>Eastern region coverage.</p>
+</div>
+
+<div class="region-card">
+<h3>Shiselweni</h3>
+<p>Southern region services.</p>
+</div>
+
+</div>
+
+</section>
+
+
+<footer>
+<p>© 2026 Fenix Car Hire | Drive Your Dream Forward</p>
+</footer>
+
+
+</body>
+</html>

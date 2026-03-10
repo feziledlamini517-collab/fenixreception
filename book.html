@@ -1,0 +1,195 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+
+<title>Book Now - Fenix Car Hire</title>
+
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<link rel="stylesheet" href="style.css">
+<style>
+
+body{
+font-family:Arial;
+margin:0;
+background:#f4f6fb;
+}
+
+/* HEADER */
+
+header{
+background:#1a4a8d;
+color:white;
+padding:15px 40px;
+display:flex;
+justify-content:space-between;
+align-items:center;
+flex-wrap:wrap;
+box-shadow:0 3px 12px rgba(0,0,0,0.2);
+}
+
+nav a{
+color:white;
+margin-left:20px;
+text-decoration:none;
+font-weight:bold;
+padding:8px 14px;
+border-radius:6px;
+transition:0.3s;
+}
+
+nav a:hover{
+background:white;
+color:#1a4a8d;
+}
+
+/* BOOK SECTION */
+
+.book-container{
+max-width:600px;
+margin:60px auto;
+background:white;
+padding:40px;
+border-radius:15px;
+box-shadow:0 15px 40px rgba(0,0,0,0.1);
+animation:fadeIn 1s ease;
+}
+
+.book-container h2{
+text-align:center;
+color:#1a4a8d;
+margin-bottom:25px;
+}
+
+/* FORM */
+
+input, select, textarea{
+width:100%;
+padding:14px;
+margin-top:12px;
+border:1px solid #ddd;
+border-radius:8px;
+transition:0.3s;
+}
+
+input:focus, select:focus, textarea:focus{
+border-color:#1a4a8d;
+outline:none;
+box-shadow:0 0 8px rgba(26,74,141,0.2);
+}
+
+button{
+width:100%;
+padding:15px;
+margin-top:20px;
+background:#1a4a8d;
+color:white;
+border:none;
+border-radius:8px;
+font-weight:bold;
+cursor:pointer;
+transition:0.3s;
+}
+
+button:hover{
+background:#0d2f5f;
+transform:scale(1.03);
+}
+
+/* WHATSAPP BUTTON */
+
+.whatsapp-btn{
+display:block;
+text-align:center;
+background:#25D366;
+color:white;
+padding:14px;
+margin-top:15px;
+text-decoration:none;
+border-radius:8px;
+font-weight:bold;
+}
+
+/* ANIMATION */
+
+@keyframes fadeIn{
+from{
+opacity:0;
+transform:translateY(30px);
+}
+to{
+opacity:1;
+transform:translateY(0);
+}
+
+footer{
+background:blue;
+color:white;
+text-align:center;
+padding:15px;
+margin-top:40px;
+}
+
+</style>
+
+</head>
+
+<body>
+
+<header>
+
+<nav>
+<div class="logo">FENIX CAR HIRE</div>
+<ul>
+<li><a href="index.html">Home</a></li>
+<li><a href="about.html">About</a></li>
+<li><a href="services.html">Services</a></li>
+<li><a href="fleet.html">Fleet</a></li>
+<li><a href="contact.html">Contact</a></li>
+<li><a href="Terms & Conditions.html">Terms & Conditions</a></li>
+</ul>
+</nav>
+
+</header>
+
+
+<div class="book-container">
+
+<h2>Book Your Vehicle</h2>
+
+<form>
+
+<input type="text" placeholder="Full Name" required>
+
+<input type="email" placeholder="Email Address" required>
+
+<input type="tel" placeholder="Phone Number" required>
+
+<select required>
+<option value="">Select Vehicle Type</option>
+<option>Sedan</option>
+<option>SUV</option>
+<option>Luxury Car</option>
+<option>Pickup Truck</option>
+</select>
+
+<input type="date" required>
+
+<input type="number" placeholder="Number of Rental Days" required>
+
+<textarea rows="4" placeholder="Additional Requirements"></textarea>
+
+<button type="submit">CONFIRM BOOKING</button>
+
+</form>
+
+<a href="https://wa.me/26876829797" class="whatsapp-btn">
+Book via WhatsApp
+</a>
+
+</div>
+<button onclick="location.href='index.html'">Back</button>
+<footer>
+<p>© 2024 Fenix Car Hire | Drive Your Dream Forward</p>
+</footer>
+</body>
+</html>

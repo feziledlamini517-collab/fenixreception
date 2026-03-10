@@ -1,0 +1,226 @@
+<!DOCTYPE html>
+<html>
+<head>
+<title>Fenix Car Hire | Terms & Conditions</title>
+<link rel="stylesheet" href="style.css">
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Terms of Service | Fenix Car Hire</title>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;600;700&display=swap" rel="stylesheet">
+    <style>
+        :root {
+            --primary: #2563eb;
+            --dark: #1e293b;
+            --light-bg: #f8fafc;
+            --accent: #3b82f6;
+        }
+
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+            font-family: 'Inter', sans-serif;
+        }
+
+        body {
+            background-color: var(--light-bg);
+            color: var(--dark);
+            line-height: 1.6;
+        }
+
+        /* Modern Navigation */
+        header {
+            background: white;
+            padding: 1rem 10%;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            position: sticky;
+            top: 0;
+            z-index: 1000;
+            box-shadow: 0 2px 10px rgba(0,0,0,0.05);
+        }
+
+        .logo {
+            font-weight: 700;
+            font-size: 1.5rem;
+            color: var(--primary);
+            text-transform: uppercase;
+            letter-spacing: -1px;
+        }
+
+        nav ul {
+            list-style: none;
+            display: flex;
+            gap: 2rem;
+        }
+
+        nav a {
+            text-decoration: none;
+            color: var(--dark);
+            font-weight: 500;
+            transition: color 0.3s;
+        }
+
+        nav a:hover {
+            color: var(--primary);
+        }
+
+        /* Hero Section */
+        .hero {
+            background: linear-gradient(rgba(37, 99, 235, 0.9), rgba(30, 41, 59, 0.9)), 
+                        url('https://images.unsplash.com/photo-1449965408869-eaa3f722e40d?auto=format&fit=crop&w=1350&q=80');
+            background-size: cover;
+            background-position: center;
+            color: white;
+            padding: 30px 10%;
+            text-align: center;
+        }
+
+        .hero h2 {
+            font-size: 1.5rem;
+            margin-bottom: 5px;
+        }
+
+        /* Terms Grid */
+        .container {
+            max-width: 1100px;
+            margin: -40px auto 60px; /* Overlaps hero slightly */
+            padding: 0 20px;
+        }
+
+        .terms-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+            gap: 25px;
+        }
+
+        .term-card {
+            background: white;
+            padding: 30px;
+            border-radius: 12px;
+            box-shadow: 0 10px 25px rgba(0,0,0,0.05);
+            transition: transform 0.3s;
+            border-top: 4px solid var(--primary);
+        }
+
+        .term-card:hover {
+            transform: translateY(-5px);
+        }
+
+        .term-card h3 {
+            margin-bottom: 15px;
+            color: var(--primary);
+            font-size: 1.25rem;
+            display: flex;
+            align-items: center;
+            gap: 10px;
+        }
+
+        .agreement-box {
+            grid-column: 1 / -1;
+            background: var(--dark);
+            color: white;
+            text-align: center;
+            padding: 40px;
+            border-radius: 12px;
+            margin-top: 20px;
+        }
+
+        .btn {
+            display: inline-block;
+            background: var(--primary);
+            color: white;
+            padding: 12px 30px;
+            border-radius: 6px;
+            text-decoration: none;
+            margin-top: 20px;
+            font-weight: 600;
+            transition: background 0.3s;
+        }
+
+        .btn:hover {
+            background: #1d4ed8;
+        }
+
+        /* Footer */
+        footer {
+            background: var(--dark);
+            color: #94a3b8;
+            padding: 40px 10%;
+            text-align: center;
+            margin-top: auto;
+        }
+
+        @media (max-width: 768px) {
+            nav { display: none; } /* Hide menu on small screens for simplicity */
+            .hero h2 { font-size: 1.8rem; }
+        }
+    </style>
+
+</head>
+<body>
+
+<nav>
+<div class="logo">FENIX CAR HIRE</div>
+<ul>
+<li><a href="index.html">Home</a></li>
+<li><a href="about.html">About</a></li>
+<li><a href="services.html">Services</a></li>
+<li><a href="fleet.html">Fleet</a></li>
+<li><a href="contact.html">Contact</a></li>
+<li><a href="Terms & Conditions.html">Terms & Conditions</a></li>
+</ul>
+</nav>
+    </header>
+
+    <section class="hero">
+        <h2>Terms & Conditions</h2>
+        <p>Everything you need to know for a smooth journey with Fenix.</p>
+    </section>
+
+    <main class="container">
+        <div class="terms-grid">
+            <div class="term-card">
+                <h3>👤 Driver Requirements</h3>
+                <p>Safety first. All drivers must be 21+ years old and hold a valid, unexpired driver's license.</p>
+            </div>
+
+            <div class="term-card">
+                <h3>🚗 Vehicle Use</h3>
+                <p>Our fleet is for your enjoyment. We kindly ask you to avoid reckless driving or illegal activities.</p>
+            </div>
+
+            <div class="term-card">
+                <h3>⛽ Fuel Policy</h3>
+                <p>Simple and fair: please return the vehicle with the same amount of fuel it had at pickup.</p>
+            </div>
+
+            <div class="term-card">
+                <h3>🛠️ Damage & Care</h3>
+                <p>The renter is responsible for the vehicle's condition. We recommend a quick walk-around at pickup!</p>
+            </div>
+
+            <div class="term-card">
+                <h3>⏰ Late Returns</h3>
+                <p>Running late? Let us know! Late returns may incur additional hourly or daily charges.</p>
+            </div>
+
+            <div class="agreement-box">
+                <h3>Ready to hit the road?</h3>
+                <p>By proceeding with your booking, you agree to the terms mentioned above.</p>
+                <a href="#" class="btn">View Our Fleet</a>
+            </div>
+        </div>
+    </main>
+
+    <footer>
+        <p>&copy; 2026 Fenix Car Hire. Built for the road ahead.</p>
+        <p style="font-size: 0.8rem; margin-top: 10px;">All Rights Reserved | Privacy Policy | Cookie Policy</p>
+    </footer>
+
+</body>
+</html>
