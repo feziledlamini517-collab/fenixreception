@@ -18,7 +18,7 @@ CREATE TABLE IF NOT EXISTS vehicles (
 -- Bookings table
 CREATE TABLE IF NOT EXISTS bookings (
   id UUID PRIMARY KEY DEFAULT gen_random_uuid(),
-  vehicle_id UUID NOT NULL REFERENCES vehicles(id) ON DELETE CASCADE,
+  vehicle_id UUID REFERENCES vehicles(id) ON DELETE CASCADE,
   customer_name TEXT NOT NULL,
   customer_email TEXT NOT NULL,
   customer_phone TEXT NOT NULL,
@@ -33,7 +33,7 @@ CREATE TABLE IF NOT EXISTS bookings (
   updated_at TIMESTAMPTZ DEFAULT NOW()
 );
 
--- Admin profiles table (references auth.users)
+-- Admin profiles table
 CREATE TABLE IF NOT EXISTS admin_profiles (
   id UUID PRIMARY KEY REFERENCES auth.users(id) ON DELETE CASCADE,
   email TEXT NOT NULL,
@@ -47,30 +47,14 @@ ALTER TABLE vehicles ENABLE ROW LEVEL SECURITY;
 ALTER TABLE bookings ENABLE ROW LEVEL SECURITY;
 ALTER TABLE admin_profiles ENABLE ROW LEVEL SECURITY;
 
--- Vehicles policies (public read, admin write)
+-- Vehicles: anyone can view
+DROP POLICY IF EXISTS "Anyone can view vehicles" ON vehicles;
 CREATE POLICY "Anyone can view vehicles" ON vehicles FOR SELECT USING (true);
-CREATE POLICY "Admins can insert vehicles" ON vehicles FOR INSERT WITH CHECK (
-  EXISTS (SELECT 1 FROM admin_profiles WHERE id = auth.uid())
-);
-CREATE POLICY "Admins can update vehicles" ON vehicles FOR UPDATE USING (
-  EXISTS (SELECT 1 FROM admin_profiles WHERE id = auth.uid())
-);
-CREATE POLICY "Admins can delete vehicles" ON vehicles FOR DELETE USING (
-  EXISTS (SELECT 1 FROM admin_profiles WHERE id = auth.uid())
-);
 
--- Bookings policies (customers can create, admins can manage all)
+-- Bookings: anyone can insert
+DROP POLICY IF EXISTS "Anyone can create bookings" ON bookings;
 CREATE POLICY "Anyone can create bookings" ON bookings FOR INSERT WITH CHECK (true);
-CREATE POLICY "Admins can view all bookings" ON bookings FOR SELECT USING (
-  EXISTS (SELECT 1 FROM admin_profiles WHERE id = auth.uid())
-);
-CREATE POLICY "Admins can update bookings" ON bookings FOR UPDATE USING (
-  EXISTS (SELECT 1 FROM admin_profiles WHERE id = auth.uid())
-);
-CREATE POLICY "Admins can delete bookings" ON bookings FOR DELETE USING (
-  EXISTS (SELECT 1 FROM admin_profiles WHERE id = auth.uid())
-);
 
--- Admin profiles policies
-CREATE POLICY "Admins can view their own profile" ON admin_profiles FOR SELECT USING (auth.uid() = id);
-CREATE POLICY "Admins can update their own profile" ON admin_profiles FOR UPDATE USING (auth.uid() = id);
+-- Admin profiles: admins can view own
+DROP POLICY IF EXISTS "Admins can view own profile" ON admin_profiles;
+CREATE POLICY "Admins can view own profile" ON admin_profiles FOR SELECT USING (auth.uid() = id);
